@@ -1,0 +1,46 @@
+/*container{
+	margin-left: 40%;
+	margin-top: 12%;
+}
+.btn {
+	margin-left: 33%;	
+}
+.form-control{
+	padding-bottom: 20px;
+}
+.label{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+@media (max-width: 575px )
+{
+	.btn {
+	margin-left: 10%;	
+}
+.form-control{
+	width: 30%;
+}*/
+h1{
+	text-align: center;
+	text-decoration: underline;
+
+}
+
+/*<hr>{
+	margin-left: 0%;
+	width: 1px;
+}*/	
+@media (min-width: 576px ) and (max-width: 767px) {
+.btn {
+	margin-left: 15%;	
+}
+
+	}
+@media (min-width: 768px ) and (max-width: 991px) {
+.btn {
+	margin-left: 25%;	
+}
+
+
+
+}
