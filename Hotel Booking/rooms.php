@@ -44,6 +44,8 @@
 	a:link{
 		text-decoration: none;
 	}
+	.b:link{
+		color: yellow;
 	.b:visited{
 		color: yellow;
 	}
