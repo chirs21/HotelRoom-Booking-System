@@ -13,7 +13,7 @@
             font-family: COMIC SANS MS;
 	}
 	.container-fluid{
-		/*text-align: center;*/
+		
 		margin-top: 5%;
 	}
 	.label{
@@ -51,7 +51,6 @@
     if(isset($_POST['save'])) 
     {
     $roomname=$_POST['room_category']; 
-    // $roomno=$_POST['room_no']; 
     $checkin=$_POST['check_in']; 
     $checkout=$_POST['check_out']; 
     $name=$_POST['name']; 
@@ -83,10 +82,6 @@
                         $result = "No Room Is Available for the Selected Category";
                     }
 
-
-
-        // extract($_POST); 
-        // $result=$user->booknow($checkin, $checkout, $name, $phone,$roomname,$roomno);
         if($result)
         {
             echo '<div class="alert alert-success">
@@ -119,9 +114,7 @@
           	</select>
 
           </div>
-
-           <!--  <label for="room_no" class="label"><b>ROOM NO</b></label>
-            <input class="form-control" type="text" name="room_no"> -->
+		  
             <div class="form-group">
             <label for="check_in" class="label"><b>CHECK IN</b></label>&nbsp;&nbsp;&nbsp;
             <input class="form-control" type="date" name="check_in">
