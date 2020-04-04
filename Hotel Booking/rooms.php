@@ -46,6 +46,7 @@
 	}
 	.b:link{
 		color: yellow;
+	}
 	.b:visited{
 		color: yellow;
 	}
