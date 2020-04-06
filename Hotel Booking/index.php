@@ -64,6 +64,7 @@
 			<li class="nav-item"><a href="" class="nav-link">Home</a></li>
 			<li class="nav-item"><a href="rooms.php" class="nav-link">Room & Facilities</a></li>
 			<li class="nav-item"><a href="availibility.php" class="nav-link">Online Reservation</a></li>
+			<li><a href="admin.php" class="nav-link">Admin</a></li>
 		</ul>
 	</div>
 		<ul class="nav navbar-nav ml-auto">

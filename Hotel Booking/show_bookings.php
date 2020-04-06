@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ROOMS</title>
+	<title>BOOKINGS</title>
 </head>
+
 <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 <style>
 	body {
@@ -19,81 +20,78 @@
 	.container-fluid{
 		/*border: 1px solid black;*/
 		margin-top: 80px;
-        margin-left: 15%;
 		/*width: 100%;*/
 
 	}
 	.well{
-		margin-right: 200px;
-        margin-bottom: 50px;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding-top: 10px;
-        padding-left: 20px;
-        width: 350px;
-        height: 250px;
-        float: left;
+		background-color: rgba(0, 0, 0, 0.7);
+		margin-right: 20px;
+		border: 2px solid black;
+		float: left;
+		margin-bottom: 20px;
 	}
-	.heading{
+	/*.heading{
 		text-align: center;
-		/*border: 1px solid black;*/
+		border: 1px solid black;
 		height: 50px;	
-		padding-top: 2%;
+		padding-top: 2%;*/
 
 
 	}
 	.box{
-		border: 1px solid black;
-		width: 900px;
-		height: 350px;
+		/*border: 1px solid black;*/
+		width: 700px;
+		height: 305px;
 		padding-top: 5px;
 		margin-left: 2%;
-/*  */
+		float: left;
+	
+		
 	}
-	a:link{
+	/*a:link{
 		text-decoration: none;
 	}
     .b:link{
         color: yellow;
     }
 	.b:visited{
-		color: yellow;
+		color: #FFFF00;
 	}
 	.b:hover{
 		color: indigo;
 		font-size: 35px;
-	}
+	}*/
 	   
-	 h2{
-            /*color: black;*/
-            font-family: LUCIDA CONSOLE;
-            font-weight: bold;
+	 h5{
+            color: orange;
+            font-family: ARIAL;
+            /*font-weight: bold;*/
             text-shadow: 2px 2px black;
         }
-        h6
+        .category{
+        	color: blue;
+        }
+        /*h6
         {
-            /*color: orange;*/
+            color: white;
             font-weight: bold;
             font-family: monospace;
             font-size: 18px;
-        }
-        .a:link{
-            color: orange;
-        }
-        .a:visited{
-        	color: orange;
+        }*/
+        
+        /*.a:visited{
+        	color:	white;
         }
         .a:hover{
         	font-size: 20px;
         	color: blue;
-        
-        }
+        }*/
 </style>
-
 <body>
-    <div class= "container-fluid">
+	 <div class= "container-fluid">
     <?php
     include('connection.php');
-    $sql="SELECT * FROM room_types";
+    $sql="SELECT * FROM booking where status='NOT AVAILABLE'";
         $result = mysqli_query($connection, $sql);
         if($result)
         {
@@ -103,21 +101,23 @@
                 {
                     
                     echo '
-				        
+				        <div class="box">
                             <div class="col-md-5 well">
-                                <h2><a href="book.php" class="b">'.$row["room_category"].'</a></h5><hr>
-                                <h6><a href="" class="a">No. of beds: '.$row["beds"].'</a></h6>
-                                <h6><a href="" class="a">Available Rooms:'.$row["available"].'</a></h6>
-                                <h6><a href="" class="a">Facilities:'.$row["facilities"].'</a></h6>
-                                <h6><a href="" class="a">Price:'.$row["price"].'INR/night</a></h6>
+                            	<h5>Room No: '.$row["room_no"].'</h5>
+                                <h5 class="category">Room Type: '.$row["room_category"].'</h5>
+                                <h5>Check In: '.$row["check_in"].'</h5>
+                                <h5>Check Out: '.$row["check_out"].'</h5>
+                                <h5>Name: '.$row["name"].'</h5>
+                                <h5>Phone No: '.$row["phone"].'</h5>
                             </div>
-                        
+                        </div>
                                 ';
                 }
             }
-        }  
+        }
     ?>
     </div>
+
 
 </body>
 </html>
